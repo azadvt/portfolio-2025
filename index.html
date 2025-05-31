@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Azad V T - Portfolio</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
         * {
@@ -64,14 +65,35 @@
             font-weight: 600;
         }
 
-        .skills-container,
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .skill-item {
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            backdrop-filter: blur(6px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-4px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
         .projects-container {
             display: flex;
             flex-direction: column;
             gap: 30px;
         }
 
-        .skill-item,
         .project-card {
             width: 100%;
             background-color: rgba(255, 255, 255, 0.08);
@@ -82,7 +104,6 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
         }
 
-        .skill-item:hover,
         .project-card:hover {
             transform: translateY(-6px);
         }
@@ -198,18 +219,25 @@
             <h2>Skills</h2>
             <div class="skills-container">
                 <div class="skill-item">React</div>
+                <div class="skill-item">Next.js</div>
                 <div class="skill-item">Node.js</div>
                 <div class="skill-item">TypeScript</div>
                 <div class="skill-item">MongoDB</div>
+                <div class="skill-item">PostgreSQL</div>
+                <div class="skill-item">AWS</div>
+                <div class="skill-item">Amplify</div>
                 <div class="skill-item">DynamoDB</div>
-                <div class="skill-item">AWS (Amplify, Lambda, Cognito, SES, CloudFormation)</div>
+                <div class="skill-item">Cognito</div>
+                <div class="skill-item">SES</div>
+                <div class="skill-item">Lambda</div>
+                <div class="skill-item">CloudFormation</div>
                 <div class="skill-item">Firebase</div>
-                <div class="skill-item">Twilio</div>
-                <div class="skill-item">REST APIs</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">CI/CD</div>
+                <div class="skill-item">UI/UX</div>
+                <div class="skill-item">Agile</div>
                 <div class="skill-item">GraphQL</div>
-                <div class="skill-item">Docker</div>
-                <div class="skill-item">Git & GitHub</div>
-                <div class="skill-item">Responsive UI/UX Design</div>
+                <div class="skill-item">Plotly.js</div>
             </div>
         </section>
 
