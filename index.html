@@ -2,18 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Azad V T - Software Engineer</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azad V T - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
-        /* Reset and base styles */
         * {
             margin: 0;
             padding: 0;
@@ -21,363 +14,111 @@
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background-color: #f8f9fa;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.9;
+            color: white;
+            background: radial-gradient(circle at center, #0f2027, #203a43, #2c5364);
+            background-attachment: fixed;
             scroll-behavior: smooth;
         }
 
-        h1,
-        h2,
-        h3 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        /* Header styles */
         header {
-            background: linear-gradient(135deg, #2c3e50, #4a69bd, #3498db);
-            color: white;
             text-align: center;
-            padding: 5rem 1rem;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://www.transparenttextures.com/patterns/cubes.png');
-            opacity: 0.1;
+            padding: 6rem 1rem 3rem;
+            background: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            position: relative;
+            font-size: 3.2rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
         header p {
-            font-size: 1.5rem;
-            opacity: 0.9;
-            position: relative;
-            font-weight: 300;
-            letter-spacing: 1px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+            opacity: 0.85;
         }
 
-        /* Container styles */
         .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem;
-            background-color: white;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            max-width: 960px;
+            margin: auto;
+            padding: 3rem 2rem;
+            background-color: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            margin-top: -50px;
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 1;
+            margin-top: -40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
         }
 
-        /* Section styles */
         section {
             margin-bottom: 4rem;
         }
 
         section h2 {
-            position: relative;
-            padding-bottom: 0.8rem;
-            font-size: 2.2rem;
-            color: #2c3e50;
+            font-size: 2.4rem;
+            border-bottom: 3px solid #3498db;
             margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            font-weight: 600;
         }
 
-        section h2:after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 70px;
-            height: 4px;
-            background: linear-gradient(to right, #4a69bd, #3498db);
-            border-radius: 2px;
-        }
-
-        /* Skills styles */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 2rem;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, #e9f0fc, #d6e4ff);
-            color: #2c3e50;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 1rem;
-            font-weight: 500;
-            box-shadow: 0 3px 10px rgba(74, 105, 189, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(74, 105, 189, 0.1);
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(74, 105, 189, 0.2);
-            background: linear-gradient(135deg, #d6e4ff, #c1d3fe);
-        }
-
-        /* Projects section */
+        .skills-container,
         .projects-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid #eaeaea;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-img {
-            height: 180px;
-            background: linear-gradient(135deg, #4a69bd, #3498db);
             display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 3rem;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .project-content {
-            padding: 20px;
+        .skill-item,
+        .project-card {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 1.2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .skill-item:hover,
+        .project-card:hover {
+            transform: translateY(-6px);
         }
 
         .project-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: #2c3e50;
         }
 
         .project-desc {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 15px;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: #4a69bd;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            color: #3498db;
-            transform: translateX(5px);
-        }
-
-        /* Contact styles */
-        .contact-info {
-            background: linear-gradient(135deg, #f9f9f9, #f0f0f0);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 2rem;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #eaeaea;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        .contact-item:hover {
-            transform: translateX(10px);
-            background-color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-item i {
-            margin-right: 20px;
-            color: #4a69bd;
-            font-size: 1.4rem;
-            width: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover i {
-            transform: scale(1.2);
-        }
-
-        .contact-item span {
-            font-weight: 500;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 2.5rem;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #4a69bd, #3498db);
-            color: white;
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(74, 105, 189, 0.3);
-        }
-
-        .social-link:hover {
-            transform: translateY(-5px) rotate(10deg);
-            box-shadow: 0 10px 20px rgba(74, 105, 189, 0.4);
-        }
-
-        /* Footer styles */
-        footer {
-            background: linear-gradient(to right, #2c3e50, #4a69bd);
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
             font-size: 1rem;
+            opacity: 0.9;
         }
 
-        /* Scroll to top button */
-        .scroll-top {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #4a69bd, #3498db);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-            z-index: 1000;
+        .contact-info div {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
         }
 
-        .scroll-top.active {
-            opacity: 1;
-            visibility: visible;
+        a {
+            color: #58a6ff;
+            text-decoration: none;
         }
 
-        .scroll-top:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        a:hover {
+            text-decoration: underline;
         }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            header {
-                padding: 3rem 1rem;
-            }
-
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            header p {
-                font-size: 1.2rem;
-            }
-
-            .container {
-                padding: 2rem;
-                margin-left: 15px;
-                margin-right: 15px;
-                margin-top: -30px;
-            }
-
-            section h2 {
-                font-size: 1.8rem;
-            }
-
-            .projects-container {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header {
-                padding: 2.5rem 1rem;
-            }
-
-            header h1 {
-                font-size: 2rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
-
-            .container {
-                padding: 1.5rem;
-                margin-top: -20px;
-            }
-
-            section h2 {
-                font-size: 1.5rem;
-            }
-
-            .contact-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .contact-item i {
-                margin-bottom: 0.5rem;
-                margin-right: 0;
-            }
-
-            .social-links {
-                gap: 15px;
-            }
-
-            .social-link {
-                width: 40px;
-                height: 40px;
-                font-size: 1.2rem;
-            }
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 3rem;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -385,143 +126,103 @@
 <body>
     <header>
         <h1>Azad V T</h1>
-        <p>Software Engineer</p>
+        <p>Software Engineer | Full-Stack Developer | Dream Builder</p>
     </header>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>Welcome to my personal website. I am Azad V T, a passionate Software Engineer with a drive for creating
-                efficient, scalable, and user-friendly applications. I am dedicated to writing clean code and solving
-                complex problems with elegant solutions.</p>
-            <p>I enjoy working with modern technologies and continually expanding my skill set to stay ahead in the
-                ever-evolving tech landscape.</p>
+            <p>I'm a passionate software engineer who turns ideas into robust digital experiences. I specialize in
+                building scalable web applications using the modern JavaScript stack (React, Node.js, MongoDB, AWS). I
+                care deeply about clean code, intuitive UX, and creating software that actually solves real-world
+                problems.</p>
         </section>
 
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">HTML/CSS</div>
-                <div class="skill-item">React</div>
-                <div class="skill-item">Node.js</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Git</div>
-                <div class="skill-item">RESTful APIs</div>
-                <div class="skill-item">Database Design</div>
-                <div class="skill-item">UI/UX Principles</div>
-                <div class="skill-item">Agile/Scrum</div>
-            </div>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>MSc Computer Science (Distance)</strong> – University of Kerala (2023 – Present)</li>
+                <li><strong>BSc Computer Science</strong> – University of Calicut (2016 – 2019)</li>
+
+            </ul>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-container">
+
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Name 1</h3>
-                        <p class="project-desc">A short description of the project. What it does, the technologies used,
-                            and its impact.</p>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <div class="project-title">LifeWink</div>
+                    <div class="project-desc">Built a serverless app (LifeWink) to help people preserve and share
+                        personal memories securely with loved ones — using AWS Amplify, Cognito, Lambda, and DynamoDB.
+                        Scalable, efficient, and designed with empathy.</div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Name 2</h3>
-                        <p class="project-desc">A short description of the project. What it does, the technologies used,
-                            and its impact.</p>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <div class="project-title">ViaNova AI</div>
+                    <div class="project-desc">Worked on the frontend development of an AI-driven procurement platform.
+                        Built intuitive user interfaces for RFQ workflows, dynamic pricing modules, and interactive
+                        dashboards. Integrated with backend APIs to visualize bidding data and vendor profiles. Enhanced
+                        UX by implementing a clean design system and responsive layouts. <a
+                            href="https://app.storylane.io/share/sohpxqt9bgzj" target="_blank">Watch Demo</a></div>
                 </div>
+
                 <div class="project-card">
-                    <div class="project-img">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project Name 3</h3>
-                        <p class="project-desc">A short description of the project. What it does, the technologies used,
-                            and its impact.</p>
-                        <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
+                    <div class="project-title">Hawx SMS</div>
+                    <div class="project-desc">Architected and optimized a high-throughput SMS dispatch system (Hawx)
+                        that powers real-time alerts for thousands of users. Received Best Long-Time Project Award for
+                        reliability and innovation.</div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-title">ArenaCX</div>
+                    <div class="project-desc">Contributed to the migration of an existing web application for a B2B
+                        marketplace platform. Worked extensively on the frontend to improve dynamic form workflows,
+                        vendor profile management, and RFP participation. Developed UI components for tooltips, file
+                        uploads, and large-form handling. Helped integrate APIs with Prokuria and AWS for authentication
+                        and file storage, ensuring better usability and performance.</div>
+                </div>
+
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+91 8129863817</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>azadvt.mail@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <span>github.com/azadvt</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span>linkedin.com/in/azadvt</span>
-                </div>
-            </div>
-
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">MongoDB</div>
+                <div class="skill-item">AWS</div>
+                <div class="skill-item">TypeScript</div>
+                <div class="skill-item">Docker</div>
+                <div class="skill-item">GraphQL</div>
             </div>
         </section>
+
+
+
+
+
+
+    </div>
+    </section>
+    <section id="contact" class="container">
+        <h2>Contact</h2>
+        <div class="contact-info"
+            style="width: 100%; padding: 2rem; background-color: rgba(255, 255, 255, 0.05); border-radius: 12px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);">
+            <div><strong>📞 Phone:</strong> +91 8129863817</div>
+            <div><strong>📧 Email:</strong> <a href="mailto:azadvt.mail@gmail.com">azadvt.mail@gmail.com</a></div>
+            <div><strong>🌐 Links:</strong> <a href="https://github.com/azadvt" target="_blank">GitHub</a> | <a
+                    href="https://linkedin.com/in/azad-v-t" target="_blank">LinkedIn</a></div>
+            <div style="margin-top: 1rem;">Let’s build something great! Whether you're hiring or collaborating, I’m just
+                an email away.</div>
+        </div>
+    </section>
     </div>
 
-    <a href="#" class="scroll-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
     <footer>
-        <p>&copy; 2023 Azad V T. All rights reserved.</p>
+        &copy; 2025 Azad V T. All rights reserved.
     </footer>
-
-    <script>
-        // Scroll to top button
-        const scrollBtn = document.querySelector('.scroll-top');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                scrollBtn.classList.add('active');
-            } else {
-                scrollBtn.classList.remove('active');
-            }
-        });
-
-        scrollBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Smooth scrolling for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>
