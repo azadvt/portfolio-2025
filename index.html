@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Azad V T - Portfolio</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="code.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
     <style>
         * {
@@ -41,6 +41,18 @@
             font-weight: 500;
             margin-top: 0.5rem;
             opacity: 0.85;
+        }
+
+        .counter {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #d1d1d1;
+        }
+
+        .counter span {
+            display: inline-block;
+            margin: 0 15px;
         }
 
         .container {
@@ -148,6 +160,11 @@
     <header>
         <h1>Azad V T</h1>
         <p>Software Engineer | Full-Stack Developer | Dream Builder</p>
+        <div class="counter">
+            <span>🚀 Apps Built: <span id="apps-count">0</span></span>
+            <span>🌍 Users Impacted: <span id="users-count">0</span>+</span>
+            <span>⚙️ Active Projects: <span id="projects-count">0</span></span>
+        </div>
     </header>
 
     <div class="container">
@@ -257,6 +274,30 @@
     <footer>
         &copy; 2025 Azad V T. All rights reserved.
     </footer>
+
+    <script>
+        function animateCount(id, end, duration) {
+            const element = document.getElementById(id);
+            let start = 0;
+            const increment = Math.ceil(end / (duration / 50));
+
+            const counter = setInterval(() => {
+                start += increment;
+                if (start >= end) {
+                    element.textContent = end;
+                    clearInterval(counter);
+                } else {
+                    element.textContent = start;
+                }
+            }, 50);
+        }
+
+        window.onload = () => {
+            animateCount('apps-count', 5, 1000);
+            animateCount('users-count', 10000, 1500);
+            animateCount('projects-count', 3, 800);
+        };
+    </script>
 </body>
 
 </html>
